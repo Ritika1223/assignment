@@ -7,7 +7,7 @@ export default function App() {
   const [showEnquiry, setShowEnquiry] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col justify-between relative overflow-hidden">
+    <div className="min-h-screen flex flex-col justify-between relative overflow-hidden sm:overflow-auto">
       
       {/* Background Image for Desktop */}
       <div className="hidden sm:block absolute inset-0">
@@ -42,7 +42,7 @@ export default function App() {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col items-center justify-center text-center relative z-10 px-4">
+      <div className="flex-1 flex flex-col items-center justify-center text-center relative z-10 px-4 h-screen sm:h-auto">
         
         {/* Mobile Group Image */}
         <div className="block sm:hidden mb-4">
@@ -64,16 +64,14 @@ export default function App() {
           Our new website is on its way.
         </h1>
 
-        
-  {/* Description Content */}
-  <div className="max-w-2xl text-center text-black/90 sm:text-lg mb-8 font-medium">
-    India's Most Trusted Bus Rental Platform for Businesses. Hassle-Free, Long-Term Staff Transport Contracts, Outstation, Events, and More!
-    <br />
-    <span className="text-orange-600 font-semibold">
-      Corporate, Group, Pilgrimage, and Leisure Bus Services
-    </span>
-  </div>
-
+        {/* Description Content */}
+        <div className="max-w-2xl text-center text-black/90 sm:text-lg mb-8 font-medium">
+          India's Most Trusted Bus Rental Platform for Businesses. Hassle-Free, Long-Term Staff Transport Contracts, Outstation, Events, and More!
+          <br />
+          <span className="text-orange-600 font-semibold">
+            Corporate, Group, Pilgrimage, and Leisure Bus Services
+          </span>
+        </div>
         
       </div>
 
@@ -89,7 +87,7 @@ export default function App() {
 
       {/* Enquiry Modal */}
       {showEnquiry && (
-        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-start justify-center z-50">
+        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-start justify-center z-50 overflow-hidden">
           <div className="relative mt-16 w-[90vw] max-w-2xl">
             <span
               className="absolute top-4 right-4 cursor-pointer text-2xl text-gray-400 hover:text-orange-500 z-10"
