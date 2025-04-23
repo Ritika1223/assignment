@@ -7,12 +7,12 @@ export default function App() {
   const [showEnquiry, setShowEnquiry] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col justify-between relative overflow-hidden sm:overflow-auto">
+    <div className="min-h-screen flex flex-col justify-between relative overflow-hidden">
       
       {/* Background Image for Desktop */}
       <div className="hidden sm:block absolute inset-0">
         <img
-          src="assets/background.png" // Use your uploaded group+bus background here
+          src="assets/background.png" 
           alt="ANT Bus Team Background"
           className="w-full h-full object-cover"
           draggable="false"
@@ -42,12 +42,12 @@ export default function App() {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col items-center justify-center text-center relative z-10 px-4 h-screen sm:h-auto">
+      <div className="flex-1 flex flex-col items-center justify-center text-center relative z-10 px-4 h-[100dvh] sm:h-auto overflow-hidden">
         
         {/* Mobile Group Image */}
         <div className="block sm:hidden mb-4">
           <img
-            src="assets/background.png" // same image
+            src="assets/background.png"
             alt="ANT Bus Team"
             className="w-full rounded-lg shadow-lg"
             draggable="false"
@@ -87,8 +87,8 @@ export default function App() {
 
       {/* Enquiry Modal */}
       {showEnquiry && (
-        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-start justify-center z-50 overflow-hidden">
-          <div className="relative mt-16 w-[90vw] max-w-2xl">
+        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+          <div className="relative w-[90vw] max-w-2xl">
             <span
               className="absolute top-4 right-4 cursor-pointer text-2xl text-gray-400 hover:text-orange-500 z-10"
               onClick={() => setShowEnquiry(false)}
