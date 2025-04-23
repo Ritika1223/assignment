@@ -7,82 +7,78 @@ export default function App() {
   const [showEnquiry, setShowEnquiry] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col justify-between relative overflow-hidden">
-      
-      {/* Background for Desktop */}
-      <div className="hidden sm:block absolute inset-0">
-        <img
-          src="assets/background.png"
-          alt="ANT Bus Team Background"
-          className="w-full h-full object-cover"
-          draggable="false"
-        />
-        <div className="absolute inset-0 bg-white bg-opacity-70"></div>
-      </div>
+    <div className="h-screen w-screen overflow-hidden flex flex-col relative">
 
-      {/* White Background for Mobile */}
-      <div className="block sm:hidden absolute inset-0 bg-white"></div>
+      {/* Background */}
+      <div className="absolute inset-0">
+        <div className="hidden sm:block">
+          <img
+            src="assets/background.png"
+            alt="Background Bus Team"
+            className="w-full h-full object-cover"
+            draggable="false"
+          />
+          <div className="absolute inset-0 bg-white bg-opacity-70"></div>
+        </div>
+        <div className="block sm:hidden bg-white w-full h-full"></div>
+      </div>
 
       {/* Header */}
       <div className="flex items-center justify-between w-full p-4 absolute top-0 left-0 z-20 max-w-7xl mx-auto">
         <img
           src="assets/logo2.png"
           alt="ANT Logo"
-          className="h-14 select-none sm:h-20"
+          className="h-14 sm:h-20 select-none"
           draggable="false"
         />
         <button
           onClick={() => setShowEnquiry(true)}
-          className="ml-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-5 rounded-full shadow text-sm sm:text-lg"
+          className="ml-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-5 rounded-full text-sm sm:text-lg shadow"
         >
           Send Enquiry
         </button>
       </div>
 
-      {/* Main Content */}
-      <main className="flex-1 flex flex-col items-center justify-center relative z-10 w-full px-4 pt-32 sm:pt-48 text-center">
-        
-        {/* Mobile Group Image */}
-        <div className="block sm:hidden w-full mb-4">
+      {/* Main Section */}
+      <main className="flex flex-1 flex-col justify-center items-center text-center relative z-10 px-4 mt-20 sm:mt-32">
+
+        {/* Mobile Image */}
+        <div className="block sm:hidden w-full mb-2">
           <img
             src="assets/background.png"
-            alt="ANT Bus Team"
+            alt="Team Bus"
             className="w-full rounded-lg shadow"
             draggable="false"
           />
         </div>
 
-        {/* Coming Soon Tag */}
-        <div className="bg-orange-500 text-white font-bold text-xl sm:text-2xl px-6 py-2 rounded mb-4">
+        {/* Coming Soon Button */}
+        <div className="bg-orange-500 text-white font-bold text-lg sm:text-2xl px-6 py-2 rounded mb-2">
           Coming Soon!
         </div>
 
-        {/* Main Title */}
-        <h1 className="text-2xl sm:text-5xl font-extrabold text-black drop-shadow mb-4 leading-tight">
+        {/* Title */}
+        <h1 className="text-xl sm:text-5xl font-extrabold text-black drop-shadow mb-2 leading-tight">
           Our new website is on its way.
         </h1>
 
-        {/* Description */}
-        <p className="max-w-2xl text-black/90 sm:text-lg font-medium mb-6 px-2">
-          India's Most Trusted Bus Rental Platform for Businesses. Hassle-Free, Long-Term Staff Transport Contracts, Outstation, Events, and More!<br />
-          <span className="text-orange-600 font-semibold">
-            Corporate, Group, Pilgrimage, and Leisure Bus Services
-          </span>
+        {/* Subtext */}
+        <p className="max-w-md sm:max-w-2xl text-black/80 text-sm sm:text-lg font-medium">
+          We are thrilled to announce that something exciting is coming your way! Our brand-new website is under development and will soon be ready to deliver a fresh, seamless, and user-friendly experience.
         </p>
-
       </main>
 
-      {/* Bus Animation */}
-      <div className="w-full relative z-10">
+      {/* Bus Animation Bottom */}
+      <div className="relative z-10">
         <BusAnimation />
       </div>
 
       {/* Footer */}
-      <footer className="text-center py-2 text-sm text-black font-medium bg-white relative z-10">
+      <footer className="text-center py-1 text-xs sm:text-sm text-black font-medium bg-white relative z-10">
         All Rights Reserved. Designed by A N T Soft Solution.
       </footer>
 
-      {/* Enquiry Form Modal */}
+      {/* Enquiry Form */}
       {showEnquiry && (
         <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
           <div className="relative w-[90vw] max-w-2xl bg-white rounded-lg p-6">
