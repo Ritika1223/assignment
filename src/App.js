@@ -42,7 +42,7 @@ export default function App() {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col items-center justify-center text-center relative z-10 px-4">
+      <div className="flex-1 flex flex-col items-center justify-center text-center relative z-10 px-4 sm:px-8 overflow-hidden sm:overflow-visible">
         
         {/* Mobile Group Image */}
         <div className="block sm:hidden mb-4">
@@ -55,30 +55,28 @@ export default function App() {
         </div>
 
         {/* "Coming Soon" Label */}
-        <div className="bg-orange-500 text-white font-bold text-lg px-6 py-2 rounded-md mb-4 sm:bg-orange-500 sm:text-xl sm:rounded-md">
+        <div className="bg-orange-500 text-white font-bold text-base px-4 py-1 rounded mb-2 sm:text-xl sm:px-6 sm:py-2 sm:mb-4">
           Coming Soon!
         </div>
 
         {/* Title */}
-        <h1 className="text-3xl sm:text-5xl font-extrabold text-black drop-shadow mb-4">
+        <h1 className="text-2xl sm:text-5xl font-extrabold text-black drop-shadow mb-2 sm:mb-4">
           Our new website is on its way.
         </h1>
 
-        
-  {/* Description Content */}
-  <div className="max-w-2xl text-center text-black/90 sm:text-lg mb-8 font-medium">
-    India's Most Trusted Bus Rental Platform for Businesses. Hassle-Free, Long-Term Staff Transport Contracts, Outstation, Events, and More!
-    <br />
-    <span className="text-orange-600 font-semibold">
-      Corporate, Group, Pilgrimage, and Leisure Bus Services
-    </span>
-  </div>
-
+        {/* Description Content */}
+        <div className="max-w-md text-center text-black/90 text-sm sm:text-lg mb-4 sm:mb-8 font-medium">
+          India's Most Trusted Bus Rental Platform for Businesses. Hassle-Free, Long-Term Staff Transport Contracts, Outstation, Events, and More!
+          <br />
+          <span className="text-orange-600 font-semibold">
+            Corporate, Group, Pilgrimage, and Leisure Bus Services
+          </span>
+        </div>
         
       </div>
 
       {/* Bus Animation */}
-      <div className="w-full relative z-10">
+      <div className="w-full h-32 sm:h-auto relative z-10">
         <BusAnimation />
       </div>
 
