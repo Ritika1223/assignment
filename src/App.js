@@ -42,7 +42,7 @@ export default function App() {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col items-center justify-center text-center relative z-10 px-4 sm:px-8 overflow-hidden sm:overflow-visible">
+      <div className="flex-1 flex flex-col items-center justify-between text-center relative z-10 px-4 sm:px-8 overflow-hidden sm:overflow-visible">
         
         {/* Mobile Group Image */}
         <div className="block sm:hidden mb-4">
