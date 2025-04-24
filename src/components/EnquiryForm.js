@@ -118,7 +118,7 @@ export default function EnquiryForm({ setShowEnquiry }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-3xl w-full mx-auto bg-white p-6 rounded-2xl shadow-xl text-sm border border-gray-100">
+    <form onSubmit={handleSubmit} className="max-w-xl w-full mx-auto bg-white p-6 rounded-2xl shadow-xl text-sm border border-gray-100">
       <h2 className="text-lg font-semibold text-center mb-4 text-blue-700">🚌 Bus Hire Enquiry Form</h2>
 
       <div className="h-2 bg-gradient-to-r from-orange-400 to-blue-500 rounded-full mb-6" style={{ width: `${(step / totalSteps) * 100}%` }}></div>
