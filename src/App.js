@@ -7,14 +7,14 @@ export default function App() {
   const [showEnquiry, setShowEnquiry] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col justify-between relative overflow-hidden">
+    <div className="min-h-[100dvh] flex flex-col justify-between relative overflow-hidden">
       
       {/* Background Image for Desktop */}
       <div className="hidden sm:block absolute inset-0">
         <img
           src="assets/background.png"
           alt="ANT Bus Team Background"
-          className="w-full h-full object-cover"
+          className="w-full  object-cover"
           draggable="false"
         />
         <div className="absolute inset-0 bg-white bg-opacity-70"></div>
@@ -24,48 +24,49 @@ export default function App() {
       <div className="block sm:hidden absolute inset-0 bg-white bg-opacity-70"></div>
 
       {/* Header: Logo + Button */}
-      <div className="flex items-center justify-between w-full p-4 absolute top-0 left-0 z-20">
+      <div className="w-full px-4 py-1 flex justify-between items-center absolute top-0 z-20">
+        
         {/* Logo */}
         <img
           src="assets/logo2.png"
           alt="ANT Logo"
-          className="h-14 select-none mx-auto sm:mx-0 sm:h-20"
+          className="h-16 select-none mx-auto sm:mx-0 sm:h-20"
           draggable="false"
         />
         {/* Enquiry Button */}
         <button
           onClick={() => setShowEnquiry(true)}
-          className="ml-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded-full shadow text-xs sm:text-lg sm:py-2 sm:px-6"
+          className="ml-auto bg-blue-600 hover:bg-blue-800 text-white font-bold py-1 px-3 rounded-full shadow "
         >
           Send Enquiry
         </button>
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col items-center justify-center text-center relative z-10 px-4 h-[100dvh] sm:h-auto overflow-hidden">
+      <div className="flex-1 flex flex-col items-center justify-center text-center relative z-10  h-[100dvh] ">
         
         {/* Mobile Group Image */}
         <div className="block sm:hidden mb-2">
           <img
             src="assets/background.png"
             alt="ANT Bus Team"
-            className="w-full max-h-[30vh] object-contain rounded-lg shadow-lg"
+            className="w-full max-h-[50vh] object-contain rounded-lg shadow-lg"
             draggable="false"
           />
         </div>
 
         {/* "Coming Soon" Label */}
-        <div className="bg-orange-500 text-white font-bold text-sm px-4 py-1 rounded mb-2 sm:text-xl sm:rounded-md sm:px-6 sm:py-2">
+        <div className="bg-orange-600 text-white font-bold text-sm px-4 py-1 rounded mb-2 sm:text-xl sm:rounded-md sm:px-6 sm:py-2">
           Coming Soon!
         </div>
 
         {/* Title */}
-        <h1 className="text-2xl sm:text-5xl font-extrabold text-black drop-shadow mb-2">
+        <h1 className="text-2xl sm:text-5xl font-extrabold text-black drop-shadow mb-4">
           Our new website is on its way.
         </h1>
 
         {/* Description */}
-        <div className="max-w-2xl text-center text-black/90 text-xs sm:text-lg mb-4 font-medium px-2">
+        <div className="max-w-2xl text-center text-black/90  sm:text-lg font-medium px-4">
           India's Most Trusted Bus Rental Platform for Businesses. Hassle-Free, Long-Term Staff Transport Contracts, Outstation, Events, and More!
           <br />
           <span className="text-orange-600 font-semibold">
